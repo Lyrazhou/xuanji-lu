@@ -1,0 +1,41 @@
+{
+  "product": "璇玑录",
+  "edition": "星骰工作室本地版",
+  "releaseVersion": "v260825B",
+  "releaseDateTimezone": "UTC+8",
+  "releaseDate": "2026-08-25",
+  "deliveryType": "minimal-version-locked-patch",
+  "platform": "windows-x64",
+  "sourceRelease": {
+    "userVersion": "v260825A",
+    "internalVersion": "0.1.0"
+  },
+  "targetRelease": {
+    "userVersion": "v260825B",
+    "internalVersion": "0.1.1"
+  },
+  "patch": {
+    "file": "璇玑录-v260825A-to-v260825B-Patch.exe",
+    "format": "NSIS",
+    "sha256": "d000293becd729610c2092b6cfd54c76790a8779245f0c605b007a38288a09bf",
+    "codeSigned": false,
+    "replacementFiles": ["xuanji-lu.exe"],
+    "rollbackBackup": "xuanji-lu-v260825A-backup.exe"
+  },
+  "dataProtection": {
+    "untouched": [
+      "%LOCALAPPDATA%/XuanjiLu/xuanji-lu.sqlite3",
+      "%LOCALAPPDATA%/XuanjiLu/images",
+      "%LOCALAPPDATA%/XuanjiLu/backups",
+      "Windows Credential Manager model-profile secrets"
+    ]
+  },
+  "validated": [
+    "TypeScript production build",
+    "Rust backend check",
+    "SDE-1 user sample parsing regression test",
+    "Windows x64 executable cross-compilation",
+    "NSIS version-locked patch compilation",
+    "SHA-256 verification file generation"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "product": "璇玑录",
+  "edition": "星骰工作室本地版",
+  "releaseVersion": "v260825F",
+  "releaseDate": "2026-08-25",
+  "timezone": "UTC+8",
+  "internalVersion": "0.1.5",
+  "architecture": "windows-x64",
+  "releaseStrategy": "incremental_with_user_requested_full_installer",
+  "fullInstaller": {
+    "file": "璇玑录-v260825F-Full-Setup-x64.exe",
+    "sha256": "666652926dc20ba234e82efc69f66986b7bd84b554e8122405cefccc7db04307",
+    "installer": "NSIS",
+    "contains": ["xuanji-lu.exe"],
+    "purpose": "用户明确要求的完整 Windows x64 安装包"
+  },
+  "patch": {
+    "file": "璇玑录-v260825E-to-v260825F-Patch.exe",
+    "sha256": "158bbf2b895e33c629a76161422292d777870f04272e70efc6d70bfd1821d2da",
+    "baseReleaseVersion": "v260825E",
+    "baseInternalVersion": "0.1.4",
+    "targetReleaseVersion": "v260825F",
+    "targetInternalVersion": "0.1.5",
+    "contains": ["xuanji-lu.exe"],
+    "installer": "NSIS",
+    "nsisSource": "../patch/v260825E-to-v260825F.nsi"
+  },
+  "artifacts": {
+    "fullInstallerChecksum": "璇玑录-v260825F-Full-Setup-x64.exe.sha256",
+    "fullInstallerNotes": "完整安装包说明-璇玑录-v260825F.md",
+    "patchChecksum": "璇玑录-v260825E-to-v260825F-Patch.exe.sha256",
+    "patchReleaseNotes": "更新说明-璇玑录-v260825E-to-v260825F.md"
+  },
+  "validation": {
+    "typescriptProductionBuild": "passed",
+    "rustUnitTests": { "passed": 10, "failed": 0 },
+    "windowsX64Build": "passed",
+    "fullInstallerArchiveContainsExecutable": true,
+    "fullInstallerChecksumVerified": true
+  },
+  "highlights": [
+    "历史摘要恢复接近原始宽度并补充详情底部关闭按钮",
+    "多标签筛选改为全部命中的与关系",
+    "修复 Windows 默认图片查看器的 open_path ACL 许可",
+    "图库大图弹窗增大、缩略图文字加大并按每页十张分页",
+    "保留 v260825E 到 v260825F 的逐级补丁，并按用户明确要求追加完整安装包"
+  ]
+}

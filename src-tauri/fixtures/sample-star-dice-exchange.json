@@ -1,0 +1,114 @@
+{
+  "format": "star-dice-exchange",
+  "version": 1,
+  "source": "web",
+  "appVersion": "v260824",
+  "exportedAt": "2026-08-25T04:54:00.000Z",
+  "profile": {
+    "userId": "rh_1234567",
+    "userLabel": "示例档案"
+  },
+  "divinationRecords": [
+    {
+      "uid": "div|2026-08-20T14:30:00.000Z|该不该接受这个新的工作机会？|moon+libra+house-10",
+      "created": "2026-08-20T14:30:00.000Z",
+      "updated": "2026-08-20T14:35:00.000Z",
+      "question": "该不该接受这个新的工作机会？",
+      "dice": { "planet": "moon", "zodiac": "libra", "house": "house-10" },
+      "reading": {
+        "diceReadings": [
+          {
+            "diceLabel": "行星骰",
+            "faceName": "月亮",
+            "faceGlyph": "☽",
+            "meaning": "月亮落在事业宫，说明你对这份新工作的判断更多来自直觉与情绪安全感，而非纯理性的利弊。先问自己：想到这份工作，心里是踏实还是紧绷。"
+          },
+          {
+            "diceLabel": "星座骰",
+            "faceName": "天秤座",
+            "faceGlyph": "♎",
+            "meaning": "天秤座提醒你在「自己的需求」与「他人的期待」之间找平衡。这份机会如果让你在关系里过度迁就，要重新衡量。"
+          },
+          {
+            "diceLabel": "宫骰",
+            "faceName": "第 10 宫",
+            "faceGlyph": "Ⅹ",
+            "meaning": "第 10 宫是事业与公众形象的位置。这颗骰子强化了「职业方向」的主题，说明这个决定确实关乎你的长远名望，值得认真对待。"
+          }
+        ],
+        "summary": "整体看，月亮、天秤与第 10 宫的组合提示：这是一个真正关乎事业方向的抉择，但你的内心尚未完全安定。建议先不要被外部的光环或他人的评价推着走，给自己几天时间感受情绪的真实反应；同时核对这份工作在「个人需求」与「外部期待」上是否失衡。若直觉踏实且不破坏关系的平衡，就可以接受；若只有理性划算而心里发紧，则再等等。",
+        "imagePrompt": "A mystical 16:9 astrology artwork: a serene moon glowing over a pair of golden scales balanced atop a mountain peak under deep blue-violet night sky, golden starlight, dreamy sacred atmosphere"
+      },
+      "summaryText": "整体看，月亮、天秤与第 10 宫的组合提示：这是一个真正关乎事业方向的抉择，但你的内心尚未完全安定。建议先不要被外部的光环或他人的评价推着走，给自己几天时间感受情绪的真实反应；同时核对这份工作在「个人需求」与「外部期待」上是否失衡。若直觉踏实且不破坏关系的平衡，就可以接受；若只有理性划算而心里发紧，则再等等。",
+      "imageUrl": "",
+      "reviewNote": "三天后再想，直觉还是发紧，先婉拒了。",
+      "rating": 4,
+      "tagNames": ["重要"]
+    },
+    {
+      "uid": "div|2026-08-22T09:15:00.000Z|我和他还能继续走下去吗？|venus+scorpio+house-7",
+      "created": "2026-08-22T09:15:00.000Z",
+      "updated": "2026-08-22T09:40:00.000Z",
+      "question": "我和他还能继续走下去吗？",
+      "dice": { "planet": "venus", "zodiac": "scorpio", "house": "house-7" },
+      "reading": {
+        "diceReadings": [
+          {
+            "diceLabel": "行星骰",
+            "faceName": "金星",
+            "faceGlyph": "♀",
+            "meaning": "金星主爱与关系，出现在这个问题里说明情感本身仍是核心动力，并非纯粹的疲惫或敷衍。"
+          },
+          {
+            "diceLabel": "星座骰",
+            "faceName": "天蝎座",
+            "faceGlyph": "♏",
+            "meaning": "天蝎座带来深度、占有与转化的能量：关系里可能有未被说破的暗流或旧伤，需要直面而非回避。"
+          },
+          {
+            "diceLabel": "宫骰",
+            "faceName": "第 7 宫",
+            "faceGlyph": "Ⅶ",
+            "meaning": "第 7 宫正是伴侣与一对一关系的宫位，三颗骰子全部指向关系主题，说明这正是该正视它的时刻。"
+          }
+        ],
+        "summary": "金星落天蝎、入第 7 宫：这段关系并非走到尽头，而是到了「要么更深入、要么彻底转化」的关口。建议把长久回避的那件事摊开谈一次，不评判谁对谁错，只说彼此的真实感受。若双方都愿意直面并继续，关系会比从前更紧实；若只有一方愿意，那就是该尊重的答案。",
+        "imagePrompt": "A mystical 16:9 astrology artwork: two luminous figures facing each other across a still mirror lake under deep blue-violet night sky, a golden venus symbol and scorpio glyph woven into the starlight, intense emotional atmosphere, dreamy sacred mood"
+      },
+      "summaryText": "金星落天蝎、入第 7 宫：这段关系并非走到尽头，而是到了「要么更深入、要么彻底转化」的关口。建议把长久回避的那件事摊开谈一次，不评判谁对谁错，只说彼此的真实感受。若双方都愿意直面并继续，关系会比从前更紧实；若只有一方愿意，那就是该尊重的答案。",
+      "imageUrl": "https://cdn.runninghub.com/stardice/sample-poster-01.png",
+      "reviewNote": "",
+      "rating": 0,
+      "tagNames": ["图片"]
+    }
+  ],
+  "trainingRecords": [
+    {
+      "uid": "trn|2026-08-23T20:10:00.000Z|最近和同事总起冲突，我该怎么调整？|sun+leo+house-6",
+      "created": "2026-08-23T20:10:00.000Z",
+      "question": "最近和同事总起冲突，我该怎么调整？",
+      "dice": { "planet": "sun", "zodiac": "leo", "house": "house-6" },
+      "diceText": "行星骰：太阳（☉）；星座骰：狮子座（♌）；宫骰：第 6 宫（Ⅵ）",
+      "userAnswer": "我觉得是太阳和狮子座让我太想表现、太想被认可，所以一点摩擦就觉得自己被针对；第 6 宫又落在日常工作环境，所以冲突都出在琐碎协作上。调整方向是少抢风头、多把功劳分出去。",
+      "aiCompareText": "【行星骰 · 太阳】\n我的解读：认为冲突源于太想表现、太想被认可，自我意识过强。\n参考解读：太阳在此问中确实指向自我意识与被看见的需求，但它的正面是「领导与担当」——你的冲突不在于想表现，而在于表现时没给同事留位置。\n\n【星座骰 · 狮子座】\n我的解读：狮子座让我情绪外放、好面子。\n参考解读：狮子座除好面子，还有「慷慨与舞台感」。若把舞台让出一半给同事，面子反而更稳。\n\n【宫骰 · 第 6 宫】\n我的解读：冲突集中在日常协作的琐事上。\n参考解读：第 6 宫是日常与习惯的宫位，提示问题出在工作流程与分工习惯，而非人事恩怨。建议先理流程、分清边界，再谈情绪。\n\n亮点：抓住了「自我意识 + 日常宫位」这条主线，判断方向正确。\n可改进：把焦点从「我该怎么压着自己」转向「流程与分工怎么更顺」，后者的解法更落地。\n整体点评：解盘手感已经在线，下一步练「把骰子翻译成可执行动作」而非停留在心理归因。"
+    }
+  ],
+  "tags": [
+    { "name": "重要", "color": "#c6a15b", "meaning": "值得反复回看的卦" },
+    { "name": "图片", "color": "#5b8ec6", "meaning": "这条占卜生成过星语图片" }
+  ],
+  "galleryItems": [
+    {
+      "uid": "img|2026-08-22T09:20:00.000Z|f3133069",
+      "created": "2026-08-22T09:20:00.000Z",
+      "imageUrl": "https://cdn.runninghub.com/stardice/sample-poster-01.png",
+      "mode": "poster",
+      "question": "我和他还能继续走下去吗？",
+      "diceText": "行星骰：金星（♀）；星座骰：天蝎座（♏）；宫骰：第 7 宫（Ⅶ）"
+    }
+  ],
+  "prefs": {
+    "text_model": "gemini-3.5-flash",
+    "image_model": "gpt-image-2"
+  }
+}

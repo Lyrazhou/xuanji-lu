@@ -1,0 +1,58 @@
+{
+  "product": "璇玑录",
+  "edition": "星骰工作室本地版",
+  "releaseVersion": "v260825G",
+  "releaseDate": "2026-08-25",
+  "timezone": "UTC+8",
+  "internalVersion": "0.1.6",
+  "architecture": "windows-x64",
+  "releaseStrategy": "incremental_with_user_requested_full_installer",
+  "fullInstaller": {
+    "file": "璇玑录-v260825G-Full-Setup-x64.exe",
+    "sha256": "029046a59a7b85807889423c14dc4db8d9c9abaf330c5dee4b022b1d467eea32",
+    "installer": "NSIS",
+    "contains": ["xuanji-lu.exe"],
+    "purpose": "用户卸载旧版后重新安装的 Windows x64 完整安装包"
+  },
+  "patch": {
+    "file": "璇玑录-v260825F-to-v260825G-Patch.exe",
+    "sha256": "9b1fbf35d7c288ee74ce5895a20d06256deb050db0d0aef929b6065e103f3dff",
+    "baseReleaseVersion": "v260825F",
+    "baseInternalVersion": "0.1.5",
+    "targetReleaseVersion": "v260825G",
+    "targetInternalVersion": "0.1.6",
+    "contains": ["xuanji-lu.exe"],
+    "installer": "NSIS",
+    "nsisSource": "../patch/v260825F-to-v260825G.nsi",
+    "migrationDesign": "../patch/v260825F-to-v260825G-migration-design.md"
+  },
+  "migration": {
+    "legacyDataRoot": "%LOCALAPPDATA%\\XuanjiLu",
+    "targetDataRoot": "%LOCALAPPDATA%\\璇玑录\\data",
+    "moves": ["xuanji-lu.sqlite3", "images", "backups"],
+    "credentialManagerSecretsMoved": false,
+    "databaseImagePathsRewrittenOnStartup": true,
+    "fallbackCopyIfDirectInstallOrInterruptedMigration": true,
+    "rollbackOnExecutableWriteFailure": true
+  },
+  "imageOpening": {
+    "permission": "opener:allow-open-path",
+    "allowedPathScope": "$EXE/data/images/**/*",
+    "assetProtocolScope": "$EXE/data/images/**/*"
+  },
+  "artifacts": {
+    "fullInstallerChecksum": "璇玑录-v260825G-Full-Setup-x64.exe.sha256",
+    "fullInstallerNotes": "完整安装包说明-璇玑录-v260825G.md",
+    "patchChecksum": "璇玑录-v260825F-to-v260825G-Patch.exe.sha256",
+    "patchReleaseNotes": "更新说明-璇玑录-v260825F-to-v260825G.md"
+  },
+  "validation": {
+    "typescriptProductionBuild": "passed",
+    "rustUnitTests": { "passed": 11, "failed": 0 },
+    "windowsX64Build": "passed",
+    "fullInstallerArchiveContainsExecutable": true,
+    "fullInstallerChecksumVerified": true,
+    "patchArchiveContainsOnlyNewExecutable": true,
+    "patchChecksumVerified": true
+  }
+}

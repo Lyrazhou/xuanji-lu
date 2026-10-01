@@ -1,0 +1,45 @@
+{
+  "product": "璇玑录",
+  "edition": "星骰工作室本地版",
+  "releaseVersion": "v260825J",
+  "releaseDate": "2026-08-26",
+  "timezone": "UTC+8",
+  "internalVersion": "0.1.9",
+  "architecture": "windows-x64",
+  "releaseStrategy": "incremental",
+  "patch": {
+    "file": "璇玑录-v260825I-to-v260825J-Patch.exe",
+    "sha256": "aff772a40b63d32e049c11c40091830972df2ae20424c5772c43f129f3457d1e",
+    "baseReleaseVersion": "v260825I",
+    "baseInternalVersion": "0.1.8",
+    "targetReleaseVersion": "v260825J",
+    "targetInternalVersion": "0.1.9",
+    "contains": ["xuanji-lu.exe"],
+    "installer": "NSIS",
+    "nsisSource": "../patch/v260825I-to-v260825J.nsi"
+  },
+  "fixes": {
+    "initialization": {
+      "rootCause": "Tauri IPC nested map could be decoded as a boolean command argument",
+      "frontendPayload": { "requestJson": "{\"deleteImages\":true,\"deleteProfiles\":false}" },
+      "backendContract": "single request_json string, parsed to InitializeArchiveRequest"
+    },
+    "openOriginal": {
+      "rootCause": "frontend opener open_path was restricted by ACL path scope",
+      "frontendContract": "open_local_image command for local archive files",
+      "backendValidation": "canonical existing file must be inside data/images",
+      "systemViewer": "called from controlled Rust backend"
+    }
+  },
+  "artifacts": {
+    "checksum": "璇玑录-v260825I-to-v260825J-Patch.exe.sha256",
+    "releaseNotes": "更新说明-璇玑录-v260825I-to-v260825J.md"
+  },
+  "validation": {
+    "typescriptProductionBuild": "passed",
+    "rustUnitTests": { "passed": 14, "failed": 0 },
+    "windowsX64Build": "passed",
+    "patchArchiveContainsOnlyNewExecutable": true,
+    "patchChecksumVerified": true
+  }
+}

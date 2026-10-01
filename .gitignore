@@ -1,0 +1,25 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# User data and logs
+/data/
+/logs/
+*.sqlite
+*.sqlite3
+*.db
+
+# Build output and dependencies
+/node_modules/
+/dist/
+/src-tauri/target/
+
+# Local editor / OS files
+.DS_Store
+Thumbs.db
+.vscode/

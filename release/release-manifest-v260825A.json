@@ -1,0 +1,47 @@
+{
+  "product": "璇玑录",
+  "edition": "星骰工作室本地版",
+  "releaseVersion": "v260825A",
+  "releaseDateTimezone": "UTC+8",
+  "releaseDate": "2026-08-25",
+  "deliveryType": "full-installer",
+  "platform": "windows-x64",
+  "installer": {
+    "file": "璇玑录-v260825A-Setup.exe",
+    "format": "NSIS",
+    "sha256": "c077ed48a5cc7d270d08c75721c4236c6dc17f1efd915d727c47c896b4fa1dc7",
+    "codeSigned": false,
+    "installationScope": "current-user"
+  },
+  "sourceArchive": {
+    "file": "璇玑录-v260825A-Source.zip",
+    "sha256": "854eb3de79d1ebd86b6745626605999a9807d0230fbb17e514996842bc55eb2a"
+  },
+  "runtimeData": {
+    "mode": "local-first",
+    "database": "SQLite",
+    "directory": "%LOCALAPPDATA%/XuanjiLu",
+    "imageDirectory": "%LOCALAPPDATA%/XuanjiLu/images",
+    "backupDirectory": "%LOCALAPPDATA%/XuanjiLu/backups"
+  },
+  "releasePolicy": {
+    "nextDeliveryDefault": "minimal-version-locked-patch",
+    "newFullInstallerOnlyWhen": "user-explicitly-requests",
+    "versioning": "vyyMMdd + A..Z, AA..; UTC+8 date basis"
+  },
+  "validated": [
+    "TypeScript production build",
+    "Rust backend type check",
+    "SDE-1 user sample parsing regression test",
+    "Windows x64 executable cross-compilation",
+    "Windows x64 NSIS installer generation",
+    "homepage visual preview"
+  ],
+  "requiresUserWindowsAcceptance": [
+    "installation and launch",
+    "Windows WebView2 availability",
+    "file dialog access",
+    "Windows Credential Manager secret storage",
+    "SDE-1 import/export using real local files"
+  ]
+}

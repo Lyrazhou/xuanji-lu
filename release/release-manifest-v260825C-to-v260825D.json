@@ -1,0 +1,56 @@
+{
+  "product": "璇玑录",
+  "edition": "星骰工作室本地版",
+  "deliveryType": "sequential-minimal-patch",
+  "platform": "windows-x64",
+  "sourceRelease": {
+    "userVersion": "v260825C",
+    "internalVersion": "0.1.2"
+  },
+  "targetRelease": {
+    "userVersion": "v260825D",
+    "internalVersion": "0.1.3"
+  },
+  "patch": {
+    "file": "璇玑录-v260825C-to-v260825D-Patch.exe",
+    "format": "NSIS",
+    "sha256": "adb4ab7840888a636b2f0c6cf6a785d434fe91094aa5a36a7186a559021282fb",
+    "codeSigned": false,
+    "replacementFiles": ["xuanji-lu.exe"],
+    "rollbackBackup": "xuanji-lu-v260825C-backup.exe"
+  },
+  "includedChanges": [
+    "DALL·E 2、DALL·E 3、GPT Image 和通用兼容模型的自动参数预设（兼容模型名前缀）",
+    "每个生图 Profile 的尺寸、质量、输出格式和响应格式覆写",
+    "Base64 兼容字段与压缩 HTTP 响应读取增强",
+    "训练场练习题增至 22px",
+    "侧栏版本号金红色强化显示"
+  ],
+  "databaseMigration": {
+    "table": "model_profiles",
+    "addedColumns": [
+      "image_size_override",
+      "image_quality_override",
+      "image_output_format_override",
+      "image_response_format_override"
+    ],
+    "defaults": "空字符串；原有 Profile 自动使用模型预设。"
+  },
+  "dataProtection": {
+    "untouched": [
+      "%LOCALAPPDATA%/XuanjiLu/xuanji-lu.sqlite3",
+      "%LOCALAPPDATA%/XuanjiLu/images",
+      "%LOCALAPPDATA%/XuanjiLu/backups",
+      "Windows Credential Manager model-profile secrets"
+    ]
+  },
+  "validated": [
+    "TypeScript production build",
+    "DALL·E / GPT Image request preset unit tests",
+    "SDE-1 user sample parsing regression test",
+    "Windows x64 executable cross-compilation",
+    "NSIS sequential patch compilation",
+    "embedded payload inspection",
+    "SHA-256 verification"
+  ]
+}

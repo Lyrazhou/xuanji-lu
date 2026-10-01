@@ -1,0 +1,25 @@
+{
+  "product": "璇玑录",
+  "releaseVersion": "v260826B",
+  "timezone": "UTC+8",
+  "targetInternalVersion": "0.1.11",
+  "sourceReleaseVersion": "v260826A",
+  "sourceInternalVersion": "0.1.10",
+  "releaseType": "strict-adjacent-windows-x64-patch",
+  "artifact": "璇玑录-v260826A-to-v260826B-Patch.exe",
+  "sha256": "f5d90690b3f7bbb15f25e8afc5f19a101f0228f77bcc910a6b2f9fc224db285c",
+  "changes": [
+    "占卜解读 JSON 示例改为中性占位符",
+    "训练场题材复选范围与 15 字以内其它范围",
+    "训练场 AI 百分制评分、历史显示与 Markdown 导出",
+    "主窗口启动自动最大化",
+    "系统自动标签隐藏、编辑删除保护与记录保护"
+  ],
+  "validation": {
+    "frontendBuild": "passed",
+    "rustTests": "15 passed",
+    "windowsX64Build": "passed",
+    "nsisPatchBuild": "passed",
+    "sha256": "passed"
+  }
+}

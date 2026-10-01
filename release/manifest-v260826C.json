@@ -1,0 +1,24 @@
+{
+  "product": "璇玑录",
+  "releaseVersion": "v260826C",
+  "timezone": "UTC+8",
+  "targetInternalVersion": "0.1.12",
+  "sourceReleaseVersion": "v260826B",
+  "sourceInternalVersion": "0.1.11",
+  "releaseType": "strict-adjacent-windows-x64-patch",
+  "artifact": "璇玑录-v260826B-to-v260826C-Patch.exe",
+  "sha256": "4d52ada835ec52e4ed28d81bd40866e2d27f88aec682572c3bd03202e5734913",
+  "changes": [
+    "占问自动掷骰的最终三骰改为后端本地操作系统随机源",
+    "训练场三骰改为先由本地操作系统随机源抽取，再由 AI 仅生成问题",
+    "前端骰子滚动动画改用 Web Crypto 随机源",
+    "保留自然重复结果，不实施人工避重"
+  ],
+  "validation": {
+    "frontendBuild": "passed",
+    "rustTests": "16 passed",
+    "windowsX64Build": "passed",
+    "nsisPatchBuild": "passed",
+    "sha256": "passed"
+  }
+}

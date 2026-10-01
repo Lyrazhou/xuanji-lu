@@ -1,0 +1,47 @@
+{
+  "product": "璇玑录",
+  "edition": "星骰工作室本地版",
+  "releaseVersion": "v260826A",
+  "releaseDate": "2026-08-26",
+  "timezone": "UTC+8",
+  "internalVersion": "0.1.10",
+  "architecture": "windows-x64",
+  "releaseStrategy": "incremental",
+  "versioning": {
+    "dateBasedOn": "Beijing time UTC+8",
+    "newDateSequenceRestart": "A"
+  },
+  "patch": {
+    "file": "璇玑录-v260825J-to-v260826A-Patch.exe",
+    "sha256": "12f1780db695cc79189b9ca822cf1851a6ad52bd0a24b6b061462193c717fdd1",
+    "baseReleaseVersion": "v260825J",
+    "baseInternalVersion": "0.1.9",
+    "targetReleaseVersion": "v260826A",
+    "targetInternalVersion": "0.1.10",
+    "contains": ["xuanji-lu.exe"],
+    "installer": "NSIS",
+    "nsisSource": "../patch/v260825J-to-v260826A.nsi"
+  },
+  "fix": {
+    "area": "工作室偏好初始化",
+    "rootCause": "带参数初始化命令受运行时 IPC 参数映射影响而无法稳定解析",
+    "approach": "four no-argument commands selected after local confirmation",
+    "commands": [
+      "initialize_archive_keep_assets",
+      "initialize_archive_delete_images",
+      "initialize_archive_delete_profiles",
+      "initialize_archive_delete_all"
+    ]
+  },
+  "artifacts": {
+    "checksum": "璇玑录-v260825J-to-v260826A-Patch.exe.sha256",
+    "releaseNotes": "更新说明-璇玑录-v260825J-to-v260826A.md"
+  },
+  "validation": {
+    "typescriptProductionBuild": "passed",
+    "rustUnitTests": { "passed": 13, "failed": 0 },
+    "windowsX64Build": "passed",
+    "patchArchiveContainsOnlyNewExecutable": true,
+    "patchChecksumVerified": true
+  }
+}

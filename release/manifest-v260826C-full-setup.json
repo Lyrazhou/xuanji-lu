@@ -1,0 +1,22 @@
+{
+  "product": "璇玑录",
+  "releaseVersion": "v260826C",
+  "internalVersion": "0.1.12",
+  "releaseType": "full-windows-x64-setup",
+  "artifact": "璇玑录-v260826C-Full-Setup-x64.exe",
+  "sha256": "d700e70c5993ea993410c92e2ef94a85af16acb28eb956b61f91bd6a3d688b48",
+  "portable": false,
+  "validation": {
+    "frontendBuild": "passed",
+    "rustTests": "16 passed",
+    "windowsX64Build": "passed",
+    "nsisFullSetupBuild": "passed",
+    "archiveContainsMainExecutable": "passed",
+    "sha256": "passed"
+  },
+  "notes": [
+    "完整安装包不含任何用户档案、图片、Profile 或 API 密钥。",
+    "当前用户数据仍保存在安装目录下的 data 文件夹。",
+    "自动掷骰和训练场最终三骰均由本地操作系统安全随机源决定。"
+  ]
+}

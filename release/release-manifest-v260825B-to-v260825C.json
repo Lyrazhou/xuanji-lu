@@ -1,0 +1,43 @@
+{
+  "product": "璇玑录",
+  "edition": "星骰工作室本地版",
+  "deliveryType": "sequential-minimal-patch",
+  "platform": "windows-x64",
+  "sourceRelease": {
+    "userVersion": "v260825B",
+    "internalVersion": "0.1.1"
+  },
+  "targetRelease": {
+    "userVersion": "v260825C",
+    "internalVersion": "0.1.2"
+  },
+  "patch": {
+    "file": "璇玑录-v260825B-to-v260825C-Patch.exe",
+    "format": "NSIS",
+    "sha256": "45fb9078acb8362ba757037f623db3b330cc69b97b92babecd8b42e283c988f7",
+    "codeSigned": false,
+    "replacementFiles": ["xuanji-lu.exe"],
+    "rollbackBackup": "xuanji-lu-v260825B-backup.exe"
+  },
+  "includedChanges": [
+    "应用内右键上下文菜单屏蔽与浏览器式快捷键抑制",
+    "骰子壁纸与星语海报提示词恢复默认",
+    "文字与生图 Profile 的独立请求超时，默认 300 秒"
+  ],
+  "dataProtection": {
+    "untouched": [
+      "%LOCALAPPDATA%/XuanjiLu/xuanji-lu.sqlite3",
+      "%LOCALAPPDATA%/XuanjiLu/images",
+      "%LOCALAPPDATA%/XuanjiLu/backups",
+      "Windows Credential Manager model-profile secrets"
+    ],
+    "migration": "既有 model_profiles 表在首次运行时增加 timeout_seconds 列，默认值为 300。"
+  },
+  "validated": [
+    "NSIS sequential patch compilation",
+    "source version 0.1.1 check",
+    "target version 0.1.2 registry update",
+    "embedded payload inspection",
+    "SHA-256 generation"
+  ]
+}

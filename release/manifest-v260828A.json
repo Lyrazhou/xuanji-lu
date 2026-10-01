@@ -1,0 +1,41 @@
+{
+  "product": "璇玑录",
+  "releaseVersion": "v260828A",
+  "timezone": "UTC+8",
+  "sourceReleaseVersion": "v260827C",
+  "sourceDisplayVersion": "0.1.16",
+  "targetDisplayVersion": "0.1.17",
+  "platform": "Windows x64",
+  "releaseType": "strict-adjacent-patch",
+  "artifact": {
+    "file": "璇玑录-v260827C-to-v260828A-Patch.exe",
+    "sha256": "09d500deae73a24640038971c2eeefe94c3cc4d6bdfe951e78dffee56dc34711",
+    "payload": ["xuanji-lu.exe"]
+  },
+  "changes": [
+    "占卜记录和训练记录删除均改为连续两次确认。",
+    "Edge 在线语音读取和合成使用三次独立新连接重试，禁用 WebSocket 预热、连接池与分片复用，并增加连接和接收时限。",
+    "设置页自动读取音色失败改为卡片内状态提示；主动刷新时提供不含查询参数的诊断。",
+    "Edge 网络错误文本移除请求 URL 查询参数。",
+    "新生成图片归档时原子写入图片路径和“图片”系统标签。",
+    "启动与档案快照加载时回填已有图片的历史占卜记录“图片”标签。"
+  ],
+  "edgeTtsBoundary": {
+    "usesEdgeReadAloudProtocol": true,
+    "requiresNetwork": true,
+    "requiresUserApiKey": false,
+    "trustedClientTokenIsUserSecret": false,
+    "audioPersistedInDatabase": false,
+    "audioPersistedInHistory": false,
+    "audioPersistedInSDE1": false
+  },
+  "validation": {
+    "frontendProductionBuild": "passed",
+    "rustTests": "18/18 passed",
+    "edgeTtsDependencyLiveTests": "passed; voice listing, synthesis, fresh-connection paths",
+    "windowsX64CrossBuild": "passed",
+    "nsisPatchBuild": "passed",
+    "patchPayloadCheck": "passed; exactly one xuanji-lu.exe",
+    "sha256Verification": "passed"
+  }
+}

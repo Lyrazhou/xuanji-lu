@@ -1,0 +1,23 @@
+{
+  "product": "璇玑录",
+  "releaseVersion": "v260825B",
+  "deliveryType": "baseline-direct-minimal-patch-r2",
+  "baseRelease": { "userVersion": "v260825A", "internalVersion": "0.1.0" },
+  "targetRelease": { "userVersion": "v260825B", "internalVersion": "0.1.1" },
+  "patch": {
+    "file": "璇玑录-v260825A-to-v260825B-Patch-r2.exe",
+    "sha256": "3c1dd0878f16f88c68872e9efd954091360e46f59bf52008beb80fd5b4b17940",
+    "codeSigned": false,
+    "replacementFiles": ["xuanji-lu.exe"]
+  },
+  "r2Fix": {
+    "issue": "卸载项 InstallLocation 在部分环境带引号时被旧脚本错误截断，导致主程序路径检测失败。",
+    "resolution": "优先读取初版安装器写入的 HKCU\\Software\\天琴工作室（Lyra Studio）\\璇玑录 厂商路径；回退路径只去除前导引号。"
+  },
+  "longTermPolicy": "每个后续补丁从最近一个完整安装包基准直接升级到目标版本；当前基准为 v260825A。",
+  "validated": [
+    "NSIS r2 patch compilation",
+    "embedded xuanji-lu.exe payload inspection",
+    "SHA-256 generation"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "product": "璇玑录",
+  "releaseVersion": "v260827B",
+  "timezone": "UTC+8",
+  "targetDisplayVersion": "0.1.15",
+  "sourceReleaseVersion": "v260827A",
+  "sourceDisplayVersion": "0.1.14",
+  "platform": "Windows x64",
+  "releaseType": "strict-adjacent-patch",
+  "artifact": {
+    "file": "璇玑录-v260827A-to-v260827B-Patch.exe",
+    "sha256": "d6f21d2cc50d3240102705622960a955d1fbea8ababb9f3d965ae3274b23a3b6",
+    "payload": ["xuanji-lu.exe"]
+  },
+  "changes": [
+    "修复已保存 Edge 在线语音音色在重新进入设置时视觉上显示为空的问题。",
+    "当尚未重新读取在线音色时保留已保存音色选项；已有音色偏好时进入设置将自动尝试刷新列表。",
+    "星语档案的历史占问详情新增播放/停止和 MP3 另存图标。",
+    "星语档案的历史训练点评详情新增播放/停止和 MP3 另存图标。",
+    "保留占问即时结果、训练场出题和训练点评中的既有语音输出。"
+  ],
+  "dataBoundary": {
+    "speechAudioPersistedInHistory": false,
+    "speechAudioPersistedInDatabase": false,
+    "speechAudioPersistedInSDE1": false,
+    "userSelectedVoicePersistedInLocalPreferences": true,
+    "requiresNetwork": true,
+    "requiresUserApiKey": false
+  },
+  "validation": {
+    "frontendBuild": "passed",
+    "rustTests": "17/17 passed",
+    "voicePreferencePersistence": "passed; zh-CN-XiaoxiaoNeural save and reread assertion",
+    "voiceControlCoverage": "passed; 5 UI locations",
+    "windowsX64CrossBuild": "passed",
+    "nsisPatchBuild": "passed",
+    "patchPayloadCheck": "passed; exactly one xuanji-lu.exe",
+    "sha256Check": "passed"
+  }
+}

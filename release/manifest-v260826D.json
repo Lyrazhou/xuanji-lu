@@ -1,0 +1,24 @@
+{
+  "product": "璇玑录",
+  "releaseVersion": "v260826D",
+  "timezone": "UTC+8",
+  "targetInternalVersion": "0.1.13",
+  "sourceReleaseVersion": "v260826C",
+  "sourceInternalVersion": "0.1.12",
+  "releaseType": "strict-adjacent-windows-x64-patch",
+  "artifact": "璇玑录-v260826C-to-v260826D-Patch.exe",
+  "sha256": "1d0eb03d07073a86c05f6af081c927bf321f53f588884c250614a47e7107de0e",
+  "changes": [
+    "扩展 data/images 的 Tauri asset 协议路径匹配范围",
+    "新增后端受限本地图片读取与文件魔数格式识别",
+    "asset 协议加载失败时回退为安全 data URL 显示",
+    "占问完成页、星语图库和星语档案详情统一使用回退机制"
+  ],
+  "validation": {
+    "frontendBuild": "passed",
+    "rustTests": "17 passed",
+    "windowsX64Build": "passed",
+    "nsisPatchBuild": "passed",
+    "sha256": "passed"
+  }
+}

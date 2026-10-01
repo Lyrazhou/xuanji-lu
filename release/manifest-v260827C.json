@@ -1,0 +1,37 @@
+{
+  "product": "璇玑录",
+  "releaseVersion": "v260827C",
+  "timezone": "UTC+8",
+  "displayVersion": "0.1.16",
+  "platform": "Windows x64",
+  "releaseType": "full-installer",
+  "artifact": {
+    "file": "璇玑录-v260827C-x64-完整安装包.exe",
+    "sha256": "123f782c99a36e5b18d81fad26d07ddf4346450cf1bb42c68293b2a5ee9fc54c",
+    "installerFormat": "NSIS",
+    "mainExecutable": "xuanji-lu.exe"
+  },
+  "changes": [
+    "将 Edge 在线语音的应用内播放替换为用户点击时初始化的 Web Audio 内存播放，避免异步合成返回后触发桌面 WebView 自动播放拦截。",
+    "内容安全策略明确允许 data: 与 blob: 内存媒体来源。",
+    "放大结果页和历史详情中的语音播放、停止、另存图标至 42 × 42 px。",
+    "在星语档案的占卜查询列表与训练查询列表中，为每条案例标题右侧加入 38 × 38 px 的直接播放/停止图标。",
+    "保留即时占问、训练场出题、训练点评及历史详情的现有语音与 MP3 另存能力。"
+  ],
+  "dataBoundary": {
+    "installerDoesNotDeleteExistingDataDirectory": true,
+    "speechAudioPersistedInHistory": false,
+    "speechAudioPersistedInDatabase": false,
+    "speechAudioPersistedInSDE1": false,
+    "requiresNetworkForSynthesis": true,
+    "requiresUserApiKeyForTts": false
+  },
+  "validation": {
+    "frontendProductionBuild": "passed",
+    "rustTests": "17/17 passed",
+    "windowsX64Build": "passed",
+    "nsisInstaller": "passed",
+    "installerArchiveCheck": "passed; one xuanji-lu.exe payload",
+    "sha256Verification": "passed"
+  }
+}

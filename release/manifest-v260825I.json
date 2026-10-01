@@ -1,0 +1,50 @@
+{
+  "product": "璇玑录",
+  "edition": "星骰工作室本地版",
+  "releaseVersion": "v260825I",
+  "releaseDate": "2026-08-25",
+  "timezone": "UTC+8",
+  "internalVersion": "0.1.8",
+  "architecture": "windows-x64",
+  "releaseStrategy": "incremental_with_user_requested_full_installer",
+  "patch": {
+    "file": "璇玑录-v260825H-to-v260825I-Patch.exe",
+    "sha256": "0857ed7642b8e4e465e785fb48fec83b52234aeeede85d511f2e1a36e997555f",
+    "baseReleaseVersion": "v260825H",
+    "baseInternalVersion": "0.1.7",
+    "targetReleaseVersion": "v260825I",
+    "targetInternalVersion": "0.1.8",
+    "contains": ["xuanji-lu.exe"],
+    "installer": "NSIS",
+    "nsisSource": "../patch/v260825H-to-v260825I.nsi"
+  },
+  "fullInstaller": {
+    "file": "璇玑录-v260825I-Full-Setup-x64.exe",
+    "sha256": "61dea1965b7ac2739849a96e0bc31461f7a0b387203fd728d178ca461592af27",
+    "requestedByUser": true,
+    "installer": "NSIS",
+    "architecture": "x64",
+    "releaseNotes": "完整安装包说明-璇玑录-v260825I.md"
+  },
+  "fix": {
+    "area": "工作室偏好初始化",
+    "rootCause": "独立布尔命令参数的运行时解码歧义",
+    "newInvocationPayload": { "options": { "deleteImages": true, "deleteProfiles": false } },
+    "backendContract": "InitializeArchiveOptions with camelCase deserialization",
+    "regressionTest": "initialize_options_deserialize_from_frontend_payload"
+  },
+  "artifacts": {
+    "patchChecksum": "璇玑录-v260825H-to-v260825I-Patch.exe.sha256",
+    "patchReleaseNotes": "更新说明-璇玑录-v260825H-to-v260825I.md",
+    "fullInstallerChecksum": "璇玑录-v260825I-Full-Setup-x64.exe.sha256",
+    "fullInstallerNotes": "完整安装包说明-璇玑录-v260825I.md"
+  },
+  "validation": {
+    "typescriptProductionBuild": "passed",
+    "rustUnitTests": { "passed": 13, "failed": 0 },
+    "windowsX64Build": "passed",
+    "patchArchiveContainsOnlyNewExecutable": true,
+    "patchChecksumVerified": true,
+    "fullInstallerChecksumVerified": true
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "product": "璇玑录",
+  "edition": "星骰工作室本地版",
+  "releaseVersion": "v260825H",
+  "releaseDate": "2026-08-25",
+  "timezone": "UTC+8",
+  "internalVersion": "0.1.7",
+  "architecture": "windows-x64",
+  "releaseStrategy": "incremental",
+  "patch": {
+    "file": "璇玑录-v260825G-to-v260825H-Patch.exe",
+    "sha256": "754ceac5c559a6cf1975eaf9bdf631a48a1aabea3c0faf449322faa4d5290be4",
+    "baseReleaseVersion": "v260825G",
+    "baseInternalVersion": "0.1.6",
+    "targetReleaseVersion": "v260825H",
+    "targetInternalVersion": "0.1.7",
+    "contains": ["xuanji-lu.exe"],
+    "installer": "NSIS",
+    "nsisSource": "../patch/v260825G-to-v260825H.nsi"
+  },
+  "initialization": {
+    "databaseRecordsCleared": ["divination_records", "training_records", "gallery_items", "custom_tags"],
+    "systemTagsRecreated": ["自动", "手动", "图片"],
+    "localImages": "user_choice",
+    "profileSettings": "user_choice",
+    "windowsCredentialManagerSecrets": "deleted_only_when_profiles_are_deleted",
+    "retained": ["sqlite_database_file", "database_backups", "image_prompt_preferences", "debug_preferences"]
+  },
+  "artifacts": {
+    "checksum": "璇玑录-v260825G-to-v260825H-Patch.exe.sha256",
+    "releaseNotes": "更新说明-璇玑录-v260825G-to-v260825H.md"
+  },
+  "validation": {
+    "typescriptProductionBuild": "passed",
+    "rustUnitTests": { "passed": 12, "failed": 0 },
+    "windowsX64Build": "passed",
+    "patchArchiveContainsOnlyNewExecutable": true,
+    "patchChecksumVerified": true
+  }
+}

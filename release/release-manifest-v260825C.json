@@ -1,0 +1,49 @@
+{
+  "product": "璇玑录",
+  "edition": "星骰工作室本地版",
+  "releaseVersion": "v260825C",
+  "releaseDateTimezone": "UTC+8",
+  "releaseDate": "2026-08-25",
+  "deliveryType": "baseline-direct-minimal-patch",
+  "platform": "windows-x64",
+  "sourceRelease": {
+    "userVersion": "v260825A",
+    "internalVersion": "0.1.0"
+  },
+  "targetRelease": {
+    "userVersion": "v260825C",
+    "internalVersion": "0.1.2"
+  },
+  "patch": {
+    "file": "璇玑录-v260825A-to-v260825C-Patch.exe",
+    "format": "NSIS",
+    "sha256": "79e321ca175658d9b3c4dce755efb251a9832d2edbb3fa6d849d9ee0118e83dc",
+    "codeSigned": false,
+    "replacementFiles": ["xuanji-lu.exe"],
+    "rollbackBackup": "xuanji-lu-v260825A-backup.exe"
+  },
+  "includedChanges": [
+    "v260825B 的等待提示、掷骰前问号占位、训练场称谓与三类图片输出模板",
+    "应用内右键上下文菜单屏蔽及浏览器式快捷键抑制",
+    "骰子壁纸与星语海报提示词恢复默认",
+    "每个文字或生图 Profile 的可配置请求超时，默认 300 秒"
+  ],
+  "dataProtection": {
+    "untouched": [
+      "%LOCALAPPDATA%/XuanjiLu/xuanji-lu.sqlite3",
+      "%LOCALAPPDATA%/XuanjiLu/images",
+      "%LOCALAPPDATA%/XuanjiLu/backups",
+      "Windows Credential Manager model-profile secrets"
+    ],
+    "migration": "既有 model_profiles 表在首次运行时增加 timeout_seconds 列，默认值为 300。"
+  },
+  "validated": [
+    "TypeScript production build",
+    "Rust backend test",
+    "SDE-1 user sample parsing regression test",
+    "Windows x64 executable cross-compilation",
+    "NSIS baseline direct patch compilation",
+    "embedded payload inspection",
+    "SHA-256 verification file generation"
+  ]
+}
