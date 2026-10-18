@@ -1,0 +1,55 @@
+{
+  "product": "璇玑录",
+  "releaseVersion": "v261018A",
+  "timezone": "UTC+8",
+  "sourceReleaseVersion": "v260828A",
+  "sourceDisplayVersion": "0.1.17",
+  "targetDisplayVersion": "0.1.18",
+  "platform": "Windows x64",
+  "releaseType": "full-windows-x64-setup",
+  "artifact": {
+    "file": "璇玑录-v261018A-x64-完整安装包.exe",
+    "sha256": "68206b76d2ea7aa02467901e22291852031f7c9cd6ac53b27930e6b08bacdade",
+    "sizeBytes": 39500831,
+    "payload": [
+      "xuanji-lu.exe",
+      "public/backgrounds/*"
+    ],
+    "signed": false,
+    "buildHost": "Ubuntu 24.04; cross-compiled Windows x64 (GNU); Tauri marks cross-platform compilation experimental"
+  },
+  "edgeTts": {
+    "crate": "edge-tts-rust",
+    "version": "0.1.7",
+    "versionLocked": true,
+    "voiceListUsesSecMsGecV2": true,
+    "synthesisUsesSecMsGecV2": true,
+    "tokenFormat": "<16-hex-CS64>-<64-hex-SHA256>",
+    "versionPrefix": "2-",
+    "apiKeyRequired": false,
+    "azureSpeechUsed": false,
+    "onlineSmokeTest": "not yet performed in target user network; must not infer success from offline tests"
+  },
+  "dataPolicy": {
+    "userDataIncluded": false,
+    "installationDataFolderPreservedDuringUpgrade": true,
+    "databaseSchemaChanged": false,
+    "profilesOrCredentialsChanged": false
+  },
+  "validation": {
+    "frontendProductionBuild": "passed",
+    "rustTests": "19/19 passed",
+    "upstreamCapturedV2TokenVector": "passed",
+    "windowsX64Build": "passed; x86_64-pc-windows-gnu cross-compilation; Tauri labels cross-platform compilation experimental",
+    "nsisFullSetupBuild": "passed; Tauri NSIS bundle generated on Linux; unsigned",
+    "installerPayloadCheck": "passed; NSIS archive lists xuanji-lu.exe, four public backgrounds, WebView2Loader.dll and uninstall.exe; 7-Zip archive test passed; no data, credentials or build cache",
+    "sha256Verification": "passed; sha256sum -c verified final published installer",
+    "liveSmokeTest": "passed from sandbox using edge-tts-rust 0.1.7: list_voices returned 322 voices including 6 zh-CN voices; synthesized 12,862-byte MP3 for a short Chinese test phrase in 9.8 seconds; target Windows machine/browser audio playback not tested"
+  },
+  "sourceArchive": {
+    "file": "璇玑录-v261018A-Full-Source.zip",
+    "sha256": "a6a7a893d28dd6ccd975925aa4a500bec763f5ac55416e833e4e94f1126c02d6",
+    "sizeBytes": 38072132,
+    "fileCount": 131
+  }
+}

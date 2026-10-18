@@ -357,4 +357,18 @@ mod image_profile_tests {
         assert!(!message.contains("trustedclienttoken"));
         assert!(!message.contains("derived-value"));
     }
+
+    #[test]
+    fn edge_tts_v2_token_matches_upstream_captured_vector() {
+        let token = edge_tts_rust::generate_sec_ms_gec_v2_from_ticks(
+            134_363_616_000_000_000,
+            "6A5AA1D4EAFF4E9FB37E23D68491D6F4",
+        );
+        assert_eq!(
+            token,
+            "492D7694A183A45E-56E821F95D4579C5B7C7E33DC7303FF379EC36D510213555BBBB9EB17EF15876"
+        );
+        assert_eq!(token.len(), 81);
+        assert_eq!(token.as_bytes()[16], b'-');
+    }
 }

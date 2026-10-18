@@ -20,7 +20,7 @@ pub fn package_from_storage(storage: &Storage) -> Result<ExchangePackage, String
     let divination_records = snapshot.divination_records.into_iter().map(|mut r| { if let Some(relative) = local_relative(storage, &r.image_url) { r.image_url = relative; } r }).collect();
     let gallery_items = snapshot.gallery_items.into_iter().map(|mut r| { if let Some(relative) = local_relative(storage, &r.image_url) { r.image_url = relative; } r }).collect();
     Ok(ExchangePackage {
-        format: FORMAT.to_string(), version: VERSION, source: "windows".to_string(), app_version: "v260828A".to_string(),
+        format: FORMAT.to_string(), version: VERSION, source: "windows".to_string(), app_version: "v261018A".to_string(),
         exported_at: Utc::now().to_rfc3339_opts(chrono::SecondsFormat::Millis, true),
         profile: ExchangeProfile { user_id: "local".to_string(), user_label: Some("璇玑录本地档案".to_string()) },
         divination_records, training_records: snapshot.training_records,
